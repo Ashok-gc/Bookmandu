@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Bookmandu | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/add_books.css" />
+
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+
+      <div class="logo_name">BookMandu</div>
+      <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="dashboard.html">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="books.html">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Books</span>
+        </a>
+        <span class="tooltip">Books</span>
+      </li>
+      <li>
+        <a href="customers.html">
+          <i class="bx bx-user"></i>
+          <span class="links_name">Customers</span>
+        </a>
+        <span class="tooltip">Customers</span>
+      </li>
+      <li>
+        <a href="orders.html">
+          <i class="bx bx-cart-alt"></i>
+          <span class="links_name">Order</span>
+        </a>
+        <span class="tooltip">Order</span>
+      </li>
+      <li>
+        <a href="messages.html">
+          <i class="bx bx-chat"></i>
+          <span class="links_name">Messages</span>
+        </a>
+        <span class="tooltip">Messages</span>
+      </li>
+      
+      <li>
+        <a href="add_book.html" class="active">
+          <i class="bx bx-cart"></i>
+          <span class="links_name">Add Book</span>
+        </a>
+        <span class="tooltip">Add Books</span>
+      </li>
+
+      <li class="profile">
+        <div class="profile-details">
+          <div class="name_job">
+            <div class="name">Admin</div>
+            <div class="job">Logout</div>
+          </div>
+        </div>
+        <i class="bx bx-log-out" id="log_out"></i>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section" class="active">
+    <div class="text">Add Books</div>
+    <div class="home-content">
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Bookmandu Add Book Form</div>
+          <div class="sales-details">
+            <form action="" method="post" class="add-product-form" enctype="multipart/form-data">
+              <h3>Add Book</h3>
+              <span>Book Name</span>
+              <input type="text" name="p_name" placeholder="enter the product name" class="box" required />
+              <span>Author</span>
+              <input type="text" name="p_name" placeholder="enter the Author's name" class="box" required />
+              <span>Book Genre</span>
+              <input class="list" list="Genre" placeholder="Enter the type of Book" />
+              <datalist id="Genre">
+                <option value=" Fiction"></option>
+                <option value="Nonfiction"></option>
+                <option value="Drama"></option>
+                <option value="Poetry"></option>
+                <option value="Folktale"></option>
+                <option value="literature"></option>
+                <option value="Romance"></option>
+                <option value="Sci-fi"></option>
+                <option value="Biography"></option>
+                <option value="Psychological"></option>
+                <option value="Mystery"></option>
+                <option value="Thriller"></option>
+                <option value="Philosophical"></option>
+                <option value="Spiritual"></option>
+                <option value="Crime fiction"></option>
+                <option value="Children's literature"></option>
+              </datalist>
+              <span>Price</span>
+              <input type="number" name="p_price" min="0" placeholder="Enter the book price" class="box" required />
+              <span>Description</span>
+              <input type="text" name="description" min="0" placeholder="Enter the product description" class="box"
+                required />
+              <span>Quantity</span>
+              <input class="list" list="Genre" placeholder="Enter the type of Book" />  
+              <span>Image</span>
+              <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box3" style="
+                    display: inline-block;
+                    text-align: center;
+                    color: black;
+                  " required />
+              <input type="submit" value="Add the Book" name="add_product" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/admin orders.css">
+
+</head>
+
+<body>
+
+    <section class="heading">
+        <h3>Orders</h3>
+        <p> <a href="home.html">Home</a> / <span>Orders</span> </p>
+    </section>
+
+
+    <!-- orders section starts-->
+
+    <section class="orders">
+
+        <div class="box-container">
+            <div class="box">
+                <p> User id : <span>
+                       5656
+                    </span> </p>
+                <p> Placed on : <span>
+                        10 Dec 2022
+                    </span> </p>
+                <p> Name : <span>
+                        Ashok DOn
+                    </span> </p>
+                <p> Number : <span>
+                        989898989
+                    </span> </p>
+                <p> Email : <span>
+                        a@gmail.com
+                    </span> </p>
+                <p> Address : <span>
+                        Full Address
+                    </span> </p>
+                <p> Total products : <span>
+                        Geeta(4), Love(5)
+                    </span> </p>
+                <p> Total price : <span>Nrs.
+                        Nrs. 5656/-
+                    </span> </p>
+                <p> Payment Method : <span>
+                        Online
+                    </span> </p>
+                <form action="" method="post">
+                    <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">
+                    <select name="update_payment">
+                        <option value="" selected disabled>
+                            Choose
+                        </option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <input type="submit" value="update" name="update_order" class="option-btn">
+                    <a href="#"
+                        onclick="return confirm('delete this order?');" class="delete-btn">Delete</a>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--  orders section ends -->
+
+    <!-- footer section  -->
+
+    
+    <section class="credit">
+        Created by Book Mandu | all rights reserved!
+    </section>
+
+    <!-- custom js file link  -->
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>
